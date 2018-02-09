@@ -13,9 +13,32 @@ body {
 	}
 }
 
+#share-buttons {
+	position:absolute;
+	left:0px;
+	top:30px;
+	div {
+		width:50px;
+		height:50px;
+	}
+
+	#twitter {
+		background:#2ecbf8;
+		img {
+			width:100%;
+		}
+	}
+	#facebook {
+		background:#234769;
+		img {
+			width:100%;
+		}	
+	}
+	
+}
+
 #board {
 	text-align:center;
-	margin-top:50px;
 	#dots {
 
 	}
