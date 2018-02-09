@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background: url("/assets/noise_background_black.png") repeat;
+  background: url("assets/noise_background_black.png") repeat;
   color: #fff; }
   body h1 {
     font-size: 4rem;
