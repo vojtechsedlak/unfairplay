@@ -4,3 +4,31 @@
     font-size: 4rem;
     font-weight: bold;
     padding: 30px; }
+
+#board {
+  text-align: center;
+  margin-top: 50px; }
+
+.entity {
+  float: left;
+  padding: 10px;
+  height: 200px;
+  border-bottom: 1px solid #bbbbbb;
+  text-align: center; }
+  .entity .entity-image {
+    height: 120px; }
+  .entity img {
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100px; }
+  .entity a {
+    background: #2ecbf8;
+    color: #fff;
+    display: block;
+    max-width: 110px;
+    margin: auto;
+    padding-right: 10px; }
+    .entity a img {
+      width: 25px;
+      float: left;
+      padding: 0px; }
