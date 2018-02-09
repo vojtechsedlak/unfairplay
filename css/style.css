@@ -10,9 +10,25 @@ body {
   body p {
     font-size: 1.5rem; }
 
+#share-buttons {
+  position: absolute;
+  left: 0px;
+  top: 30px; }
+  #share-buttons div {
+    width: 50px;
+    height: 50px; }
+  #share-buttons #twitter {
+    background: #2ecbf8; }
+    #share-buttons #twitter img {
+      width: 100%; }
+  #share-buttons #facebook {
+    background: #234769; }
+    #share-buttons #facebook img {
+      width: 70%;
+      padding-top: 5px; }
+
 #board {
-  text-align: center;
-  margin-top: 50px; }
+  text-align: center; }
 
 .entity {
   float: left;
