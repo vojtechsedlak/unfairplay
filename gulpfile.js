@@ -7,6 +7,7 @@ var del = require('del');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var ghPages = require('gulp-gh-pages');
+var imagemin = require('gulp-imagemin');
 
 var paths = {
 	sass:'src/scss/',
@@ -40,7 +41,13 @@ gulp.task('copy', [
     'copy:jquery',
     'copy:bootstrap-css',
     'copy:bootstrap-js',
+    'copy:assets'
 ]);
+
+gulp.task('copy:assets', () =>
+	gulp.src(['src/assets/**/*'])
+		.pipe(gulp.dest(`${paths.dist}/assets`))
+);
 
 gulp.task('copy:jquery', () =>
     gulp.src(['node_modules/jquery/dist/jquery.min.js'])
@@ -58,7 +65,7 @@ gulp.task('copy:bootstrap-css', () =>
 );
 
 gulp.task('html', function(){
-  return gulp.src('src/index.html')
+  return gulp.src('src/*')
     .pipe(gulp.dest('dist'))
 });
 
