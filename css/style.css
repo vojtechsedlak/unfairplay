@@ -33,3 +33,5 @@
       width: 25px;
       float: left;
       padding: 0px; }
+  .entity a:hover {
+    background: #26aed3; }
