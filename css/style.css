@@ -24,8 +24,7 @@ body {
   #share-buttons #facebook {
     background: #234769; }
     #share-buttons #facebook img {
-      width: 70%;
-      padding-top: 5px; }
+      width: 100%; }
 
 #board {
   text-align: center; }
