@@ -22,9 +22,9 @@ gulp.task('clean:dist', function () {
 });
 
 gulp.task('sass', function() {
-	return gulp.src(`${paths.sass}/index.scss`)
+	return gulp.src(`${paths.sass}/style.scss`)
 		.pipe(sass())
-		.pipe(gulp.dest(paths.dist))
+		.pipe(gulp.dest(`${paths.dist}/css`))
 		.pipe(browserSync.reload({ stream: true }))
 });
 
@@ -36,9 +36,25 @@ gulp.task('scripts', function() {
 		.pipe(browserSync.reload({ stream: true }))
 });
 
+gulp.task('copy', [
+    'copy:jquery',
+    'copy:bootstrap-css',
+    'copy:bootstrap-js',
+]);
+
 gulp.task('copy:jquery', () =>
     gulp.src(['node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest(`${paths.dist}/js/vendor`))
+);
+
+gulp.task('copy:bootstrap-js', () =>
+    gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js'])
+        .pipe(gulp.dest(`${paths.dist}/js/vendor`))
+);
+
+gulp.task('copy:bootstrap-css', () =>
+	gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css*'])
+    	.pipe(gulp.dest(`${paths.dist}/css/vendor`))
 );
 
 gulp.task('html', function(){
@@ -63,7 +79,7 @@ gulp.task('build', function(callback) {
 	runSequence(
 		'clean:dist', 
 		'scripts',
-		'copy:jquery',
+		'copy',
 		'sass',
 		'html',
 		callback)
