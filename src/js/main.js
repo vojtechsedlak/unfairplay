@@ -7,7 +7,7 @@ $(document).ready(function() {
         	var name = data[i].gsx$organization.$t;
         	var logo = data[i].gsx$imagepleasedontedit.$t;
         	var handle = data[i].gsx$twitter.$t;
-        	var tweet = encodeURI('.@'+handle+': Withdraw your support for @FairPlayCanada. You should be ashamed for supporting this Internet censorship proposal, which will harm consumers, innovation and free expression online (cc: @NavdeepSBains) http://nositeblocking.ca #DontCensorCanada #cdnpoli')
+        	var tweet = encodeURI('.'+handle+': Withdraw your support for @FairPlayCanada. This ineffective Internet censorship proposal will harm consumers, innovation and free expression online (cc: @CRTCeng @NavdeepSBains) https://unfairplay.ca #DontCensor')
         	$('#board').append('<div class="entity col-3"><div class="entity-image"><img src="assets/images/'+logo+'"></div><a target="_new" onClick="gtag(\'event\', \'Tweet Click\')" class="btn" href="https://twitter.com/intent/tweet?text='+tweet+'"><img src="assets/images/twitter_white.svg" width:20px;"> Tweet</a></div>');
         }
         $('#dots').hide();
